@@ -29,8 +29,8 @@ I'll be using Tailwind. I think this library can help styling the UI and keeping
 
 
 ### Roadmap
-- [ ] Setup the Monorepo (Turborepo)
-- [ ] Setup the WebApp dependencies (Nuxt/VueQuery/Tailwind)
+- [X] Setup the Monorepo (Turborepo)
+- [X] Setup the WebApp dependencies (Nuxt/VueQuery/Tailwind)
 - [ ] WebApp: Develop Planet's list screen (with sorting functionality)
 - [ ] WebApp: Add planet details screen.
 - [ ] Setup RN Application.

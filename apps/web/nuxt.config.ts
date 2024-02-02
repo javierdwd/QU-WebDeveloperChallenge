@@ -7,6 +7,5 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
-  },
-  modules: ["@hebilicious/vue-query-nuxt"]
+  }
 })

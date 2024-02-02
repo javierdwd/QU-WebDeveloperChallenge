@@ -30,10 +30,9 @@ I'll be using Tailwind. I think this library can help styling the UI and keeping
 
 ### Roadmap
 - [X] Setup the Monorepo (Turborepo)
-- [X] Setup the WebApp dependencies (Nuxt/VueQuery/Tailwind)
+- [X] Setup the WebApp dependencies (Nuxt/Tailwind)
 - [ ] WebApp: Develop Planet's list screen (with sorting functionality)
 - [ ] WebApp: Add planet details screen.
-- [ ] Setup RN Application.
 - [ ] Setup RN Application.
 - [ ] MobileApp: Develop Planet's list screen (with sorting functionality)
 - [ ] MobileApp: Add planet details modal.

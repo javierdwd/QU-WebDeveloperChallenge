@@ -1,0 +1,21 @@
+{
+  "name": "@qu-challenge/repo",
+  "version": "1.0.0",
+  "description": "QU - Web Developer Challenge",
+  "author": "Javier Van Breedan <javiervanbreedan@outlook.com>",
+  "license": "ISC",
+  "scripts": {
+    "dev": "turbo dev"
+  },
+  "engines": {
+    "node": "^18.17.1",
+    "npm": "^10.2.5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.12.2"
+  }
+}

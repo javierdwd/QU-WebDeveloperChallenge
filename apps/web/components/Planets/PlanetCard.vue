@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import type { Planet } from "@qu-challenge/swapi"
-import { TextsMap } from "@qu-challenge/swapi"
+import { TextsMap, NumbericalAttrs } from "@qu-challenge/swapi"
 
-export type ValidAttributes = "diameter" | 'climate' | 'terrain' | 'population'
+type ValidAttributes = "diameter" | 'climate' | 'terrain' | 'population'
 
 const props = defineProps<{
-    planet: Planet,
-    showAttributes: ValidAttributes[]
+  planet: Planet,
+  showAttributes: ValidAttributes[]
 }>()
+
+const { safeFormat } = useNumberFormatter("es-AR");
+
+const shouldFormat = (attrName: string) => {
+  return NumbericalAttrs.includes(attrName);
+}
 </script>
 
 <template>
@@ -19,7 +25,13 @@ const props = defineProps<{
     <ul>
       <li v-for="visibleAttr in showAttributes" class="my-3">
         <strong class="block text-sm font-normal text-cyan-600 leading-3">{{TextsMap[visibleAttr]}}:</strong>
-        <span class="capitalize">{{props.planet[visibleAttr]}}</span>
+        <span class="capitalize">
+          {{
+            shouldFormat(visibleAttr)
+            ? safeFormat(props.planet[visibleAttr], '--')
+            : props.planet[visibleAttr]
+          }}
+        </span>
       </li>
     </ul>
   </article>

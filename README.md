@@ -24,6 +24,15 @@ Furthermore, I think that working with a monorepo could make this exercise more 
 I'll be using Tailwind. I think this library can help styling the UI and keeping some consistency between clients.
 </blockquote>
 
+### Recommendations to developers
+This project was developed using Microsost VS Code.
+The following extensions are highly recommended to be installed and activated in the project workspace:
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=vue.vscode-typescript-vue-plugin)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
+
+### Before start
+Complete the `.env` files inside the Apps folders. For the sake of simplicity the content of `.env.example` can be copied and pasted.
 
 ### Scripts
 
@@ -37,3 +46,4 @@ I'll be using Tailwind. I think this library can help styling the UI and keeping
 - [ ] MobileApp: Develop Planet's list screen (with sorting functionality)
 - [ ] MobileApp: Add planet details modal.
 - [ ] Complete Readme docs.
+- [ ] i18n (Nice to Have)

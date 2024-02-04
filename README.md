@@ -16,7 +16,6 @@
 I had some experience working with VueJs v2 (~1 year).
 After that I stopped using it. The reason was that the company I worked choosed React as the framework for all the new projects.  
   
-  
 Anyway, I liked it and because it is recommended for use on this challenge, I'll use it along with NuxtJs.
 I'm going to be learning Vue3 composition API and Nuxt while developing this (I never used them before). I'll be following the official documentations and using my own criteria, to create and organize the source code in the best way I can using this tech-stack.  
 
@@ -41,9 +40,10 @@ Complete the `.env` files inside the Apps folders. For the sake of simplicity th
 - [X] Setup the Monorepo (Turborepo)
 - [X] Setup the WebApp dependencies (Nuxt/Tailwind)
 - [ ] WebApp: Develop Planet's list screen (with sorting functionality)
-- [ ] WebApp: Add planet details screen.
+- [-] WebApp: Add planet details screen (discarded).
 - [ ] Setup RN Application.
 - [ ] MobileApp: Develop Planet's list screen (with sorting functionality)
 - [ ] MobileApp: Add planet details modal.
 - [ ] Complete Readme docs.
+- [ ] Add design to the Error Page (uncaught exceptions) (Nice to Have)
 - [ ] i18n (Nice to Have)

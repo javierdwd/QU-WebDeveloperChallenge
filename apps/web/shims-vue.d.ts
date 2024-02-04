@@ -1,0 +1,1 @@
+declare module '*.vue'; // Reference: https://stackoverflow.com/a/70803320

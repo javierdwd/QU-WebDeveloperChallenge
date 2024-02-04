@@ -1,0 +1,15 @@
+{
+  "name": "@qu-challenge/swapi",
+  "version": "1.0.0",
+  "description": "QU - Swapi integration",
+  "author": "Javier Van Breedan <javiervanbreedan@outlook.com>",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}

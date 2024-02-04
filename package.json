@@ -4,6 +4,7 @@
   "description": "QU - Web Developer Challenge",
   "author": "Javier Van Breedan <javiervanbreedan@outlook.com>",
   "license": "ISC",
+  "private": true,
   "scripts": {
     "dev": "turbo dev"
   },

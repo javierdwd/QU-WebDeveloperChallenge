@@ -7,5 +7,10 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  runtimeConfig: {
+    public: {
+      swapiBaseUrl: process.env.NUXT_PUBLIC_SWAPI_BASE_URL,
+    }
   }
 })

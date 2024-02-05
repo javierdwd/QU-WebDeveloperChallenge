@@ -34,8 +34,9 @@ The following extensions are highly recommended to be installed and activated in
 Complete the `.env` files inside the Apps folders. For the sake of simplicity the content of `.env.example` can be copied and pasted.
 
 ### Scripts
-Install dependencies: `npm install`
-Run the Web App: `npm run dev`
+`npm install`: Install dependencies.
+
+`npm run dev`: Run the Web App: 
 
 ### Roadmap
 - [X] Setup the Monorepo (Turborepo)

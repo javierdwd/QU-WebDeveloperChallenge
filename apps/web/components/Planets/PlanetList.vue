@@ -11,7 +11,7 @@
   
   const env = usePublicEnv();
 
-  const randomBoolean = useRandomBoolean(100);
+  const randomBoolean = useRandomBoolean(60);
   
   const {data, pending, error, refresh, status} = await useFetch<PaginatedResource<Planet>>("/planets", {
     baseURL:  env.swapiBaseUrl,

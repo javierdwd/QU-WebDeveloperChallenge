@@ -33,19 +33,75 @@ The following extensions are highly recommended to be installed and activated in
 ### Before start
 Complete the `.env` files inside the Apps folders. For the sake of simplicity the content of `.env.example` can be copied and pasted.
 
-In order to run the RN Application you will need XCode installed (tested on v15.2) and a correct enviroment setup. More information [here](https://reactnative.dev/docs/environment-setup?package-manager=npm&guide=native#installing-dependencies)
+
+### RN Application
+~In order to run the RN Application you will need XCode installed (tested on v15.2) and a correct enviroment setup. More information [here](https://reactnative.dev/docs/environment-setup?package-manager=npm&guide=native#installing-dependencies)~
+
+Update:
+I wasn't able to run the Mobile application properly.
+At first RN give problems due to the path of the \*react_native\* modules. I solved that problem switching to Yarn and using the [nohoist feature](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/).
+
+After that, XCode exited with a non-zero code. I think that could be related to NVM (node version manager), but it could be something else. I have no time to continue debugging, sorry I would like to create a mobile version using the same styling and reusing the _@packages/Swapi_ utilities.
+
+I worked on a RN challenge some time ago. It is public on my repository, they ask me to make it that way, so I think, if you like, you can review an example of a RN app made by me there. It's quite simple too, just a few files, but I setup ReactQuery and Navigation there.
+[Github Repository](https://github.com/javierdwd/RNBlazeChallenge)
 
 ### Scripts
+Run the Web App: `npm run dev`
 
 
 ### Roadmap
 - [X] Setup the Monorepo (Turborepo)
 - [X] Setup the WebApp dependencies (Nuxt/Tailwind)
 - [X] WebApp: Develop Planet's list screen (with sorting functionality)
-- [ ] ~WebApp: Add planet details screen (discarded).~
-- [ ] Setup RN Application.
-- [ ] MobileApp: Develop Planet's list screen (with sorting functionality)
-- [ ] MobileApp: Add planet details modal.
-- [ ] Complete Readme docs (Answer challenge's questionary).
+- [ ] ~WebApp: Add planet details screen~
+- [ ] ~Setup RN Application.~
+- [ ] ~MobileApp: Develop Planet's list screen (with sorting functionality)~
+- [X] Complete Readme docs (Answer challenge's questionary).
 - [ ] Add design to the Error Page (uncaught exceptions) (Nice to Have)
 - [ ] i18n (Nice to Have)
+
+
+### Questionary
+#### What's a closure? Where in the code is there a closure?
+
+I'll take the definition from the [w3cschool.com](https://www.w3schools.com/js/js_function_closures.asp)
+<blockquote>
+  A closure is a function having access to the parent scope, even after the parent function has closed.
+</blockquote>
+
+An good example of a closure feature usage in the code is the `sortPlanetsBy()` function.
+
+```ts
+// Currying: [].toSort(sortPlanetBy('title')) 
+export const sortPlanetsBy = (sortBy: keyof Planet) => 
+  (itemA: Planet, itemB: Planet) => {
+    if(sortBy === 'name') {
+      return itemA.name.localeCompare(itemB.name)
+    }
+
+    const itemANum = Number(itemA[sortBy]);
+    const itemBNum = Number(itemB[sortBy]);
+
+
+    if(!isNaN(itemANum) && isNaN(itemBNum) || itemANum < itemBNum){
+      return -1; 
+    } else if(isNaN(itemANum) && !isNaN(itemBNum) || itemANum > itemBNum) {
+      return 1
+    }
+    return 0;
+  }
+```
+
+This function return another one, which "remembers" the logical scope where it was created. This way I can access the `sortBy` value even outside of the function body.
+
+
+---
+
+#### Which are the potential side-effects in any function? Could you point out any of these cases in your code? Are they expected? Can they be avoided?
+
+Side-effects in a function are changes that the code inside a function could produce in the system during its execution.
+
+For instance `Array.prototype.sort` modifies the the original array, causing a side-effect. If you  want to avoid this behavior you can use `Array.prototype.toSorted` which creates and return a new array.
+
+I made use of this along with `sortPlanetsBy` (inside the _PlanetList.vue_ file) because I keep the inmmutability of the original variable.

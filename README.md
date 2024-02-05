@@ -105,3 +105,11 @@ Side-effects in a function are changes that the code inside a function could pro
 For instance `Array.prototype.sort` modifies the the original array, causing a side-effect. If you  want to avoid this behavior you can use `Array.prototype.toSorted` which creates and return a new array.
 
 I made use of this along with `sortPlanetsBy` (inside the _PlanetList.vue_ file) because I wanna keep the inmmutability of the original variable.
+
+
+### Screenshots
+![Loading Planet List example](./docs//imgs//screenshot-0.png)
+
+![Planet List example](./docs//imgs//screenshot-1.png)
+
+![Loading error example](./docs//imgs//screenshot-2.png)

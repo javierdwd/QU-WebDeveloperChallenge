@@ -33,6 +33,21 @@ The following extensions are highly recommended to be installed and activated in
 ### Before start
 Complete the `.env` files inside the Apps folders. For the sake of simplicity the content of `.env.example` can be copied and pasted.
 
+### Scripts
+Install dependencies: `npm install`
+Run the Web App: `npm run dev`
+
+### Roadmap
+- [X] Setup the Monorepo (Turborepo)
+- [X] Setup the WebApp dependencies (Nuxt/Tailwind)
+- [X] WebApp: Develop Planet's list screen (with sorting functionality)
+- [ ] ~WebApp: Add planet details screen~
+- [ ] ~Setup RN Application.~
+- [ ] ~MobileApp: Develop Planet's list screen (with sorting functionality)~
+- [X] Complete Readme docs (Answer challenge's questionary).
+- [ ] Add design to the Error Page (uncaught exceptions) (Nice to Have)
+- [ ] i18n (Nice to Have)
+
 
 ### RN Application
 ~In order to run the RN Application you will need XCode installed (tested on v15.2) and a correct enviroment setup. More information [here](https://reactnative.dev/docs/environment-setup?package-manager=npm&guide=native#installing-dependencies)~
@@ -45,21 +60,6 @@ After that, XCode exited with a non-zero code. I think that could be related to 
 
 I worked on a RN challenge some time ago. It is public on my repository, they ask me to make it that way, so I think, if you like, you can review an example of a RN app made by me there. It's quite simple too, just a few files, but I setup ReactQuery and Navigation there.
 [Github Repository](https://github.com/javierdwd/RNBlazeChallenge)
-
-### Scripts
-Run the Web App: `npm run dev`
-
-
-### Roadmap
-- [X] Setup the Monorepo (Turborepo)
-- [X] Setup the WebApp dependencies (Nuxt/Tailwind)
-- [X] WebApp: Develop Planet's list screen (with sorting functionality)
-- [ ] ~WebApp: Add planet details screen~
-- [ ] ~Setup RN Application.~
-- [ ] ~MobileApp: Develop Planet's list screen (with sorting functionality)~
-- [X] Complete Readme docs (Answer challenge's questionary).
-- [ ] Add design to the Error Page (uncaught exceptions) (Nice to Have)
-- [ ] i18n (Nice to Have)
 
 
 ### Questionary
@@ -104,4 +104,4 @@ Side-effects in a function are changes that the code inside a function could pro
 
 For instance `Array.prototype.sort` modifies the the original array, causing a side-effect. If you  want to avoid this behavior you can use `Array.prototype.toSorted` which creates and return a new array.
 
-I made use of this along with `sortPlanetsBy` (inside the _PlanetList.vue_ file) because I keep the inmmutability of the original variable.
+I made use of this along with `sortPlanetsBy` (inside the _PlanetList.vue_ file) because I wanna keep the inmmutability of the original variable.

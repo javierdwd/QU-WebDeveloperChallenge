@@ -33,17 +33,19 @@ The following extensions are highly recommended to be installed and activated in
 ### Before start
 Complete the `.env` files inside the Apps folders. For the sake of simplicity the content of `.env.example` can be copied and pasted.
 
+In order to run the RN Application you will need XCode installed (tested on v15.2) and a correct enviroment setup. More information [here](https://reactnative.dev/docs/environment-setup?package-manager=npm&guide=native#installing-dependencies)
+
 ### Scripts
 
 
 ### Roadmap
 - [X] Setup the Monorepo (Turborepo)
 - [X] Setup the WebApp dependencies (Nuxt/Tailwind)
-- [ ] WebApp: Develop Planet's list screen (with sorting functionality)
-- [-] WebApp: Add planet details screen (discarded).
+- [X] WebApp: Develop Planet's list screen (with sorting functionality)
+- [ ] ~WebApp: Add planet details screen (discarded).~
 - [ ] Setup RN Application.
 - [ ] MobileApp: Develop Planet's list screen (with sorting functionality)
 - [ ] MobileApp: Add planet details modal.
-- [ ] Complete Readme docs.
+- [ ] Complete Readme docs (Answer challenge's questionary).
 - [ ] Add design to the Error Page (uncaught exceptions) (Nice to Have)
 - [ ] i18n (Nice to Have)
